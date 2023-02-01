@@ -1,12 +1,24 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Usuario } from './entites/usuario.entity';
 import { UsuarioService } from './usuario.service';
 
 @Controller('users')
 export class UsuarioController {
-  private usuarioService = new UsuarioService();
+  constructor(
+    private usuarioService: UsuarioService
+  ){}
+
+  @Get(':nome')
+  public buscarPeloNome(
+    @Param('nomeDeUsuario') nomeDeUsuario: string
+  ) {
+    return this.usuarioService.buscarPeloNome(nomeDeUsuario)
+  }
 
   @Post()
-  public criar(@Body() usuario) {
+  public criar(
+    @Body() usuario: Usuario
+  ) {
     return this.usuarioService.criar(usuario);
   }
 }
