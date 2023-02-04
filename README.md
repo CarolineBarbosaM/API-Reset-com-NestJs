@@ -37,7 +37,7 @@ npm run test
 
 4. Executar Coverage
 ```bash
-npm run cov
+npm run test:cov
 ```
 
 ### Documentação:
