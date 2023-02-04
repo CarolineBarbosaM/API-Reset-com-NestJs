@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { UsuarioModule } from './usuarios/usuario.module';
-import { UsuarioService } from './usuarios/usuario.service';
-import { IsNomeDeUsuarioUnicoConstraint } from './usuarios/validator/is-nome-de-usuario-unico.validator';
+import { UsuarioModule } from './users/usuario.module';
+import { UsuarioService } from './users/usuario.service';
+import { IsNomeDeUsuarioUnicoConstraint } from './users/validator/is-nome-de-usuario-unico.validator';
 
 @Module({
   imports: [UsuarioModule],
