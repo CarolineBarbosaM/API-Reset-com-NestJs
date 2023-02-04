@@ -56,6 +56,7 @@ npm run test:cov
 
 2. Leitura:
 
-    - Orientação a Objetos e SOLID para Ninjas
+    - Orientação a Objetos e SOLID para Ninjas - **Maurício Aniche**
+    - [NestJS - Swagger - Documentação de Endpoint](https://github.com/FabricaDeSinapse/nestjs-documentacao-swagger/blob/main/README.md)
 
 3. Videos
