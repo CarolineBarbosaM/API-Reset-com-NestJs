@@ -1,8 +1,8 @@
 # API-Reset-com-NestJs
 
 API de gerenciamento de usuários utilizando conceitos como: aplicações RESET, verbos HTTP, utilização de decorators, 
-criação de serviços, padrões de projetos, inversão de controle e injeção de dependências,  <em>providers</em>, tipagens TypeScript,
-<em>path params</em>, processo de validação com  <em>class-validator </em> e  <em>class-transformer</em>, ValidationPipe, validação customizaada... (vou colocar aos pouco),
+criação de serviços, padrões de projetos, inversão de controle e injeção de dependências, <em>providers</em>, tipagens TypeScript,
+<em>path params</em>, processo de validação com  <em>class-validator </em> e  <em>class-transformer</em>, <em>ValidationPipe</em>, validação customizaada... (vou colocar aos pouco),
 utilização do Swagger API para documentação da API.
 
 ### Clone o reposotório
@@ -20,11 +20,24 @@ npm install || npm i
 
 ## Executando o Projeto
 
+1. Executar projeto
 ```bash
-- start: npm run start
-- dev: npm run start:dev
-- test: npm run test
-- cov: npm run cov
+npm run start
+```
+
+2. Executar como Dev
+```bash
+npm run start:dev
+```
+
+3. Executar Teste Unitários Jest
+```bash
+npm run test
+```
+
+4. Executar Coverage
+```bash
+npm run cov
 ```
 
 ### Documentação:
