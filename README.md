@@ -18,7 +18,7 @@ git clone https://github.com/CarolineBarbosaM/API-Reset-com-NestJs.git
 npm install || npm i
 ```
 
-## Executando o Projeto
+### Execute o Projeto
 
 1. Executar projeto
 ```bash
@@ -44,7 +44,7 @@ npm run test:cov
 
 [Swagger API](http://localhost:3000/api/)
 
-### Referêmcias:
+### Referências:
 
 0. [Documentação NestJs](https://docs.nestjs.com/)
 
