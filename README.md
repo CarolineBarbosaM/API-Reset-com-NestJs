@@ -36,13 +36,13 @@ npm install || npm i
 0. [Documentação NestJs](https://docs.nestjs.com/)
 
 1. Cursos Alura:
-- APIs REST com NestJS: buscas, validação, serialização e detalhes arquiteturais
-- Node.js: testes unitários e de integração
-- Node.js: criptografia e tokens JWT
-- Swagger: documentando suas APIs
+    - APIs REST com NestJS: buscas, validação, serialização e detalhes arquiteturais
+    - Node.js: testes unitários e de integração
+    - Node.js: criptografia e tokens JWT
+    - Swagger: documentando suas APIs
 
 2. Leitura:
 
-- Orientação a Objetos e SOLID para Ninjas
+    - Orientação a Objetos e SOLID para Ninjas
 
 3. Videos
