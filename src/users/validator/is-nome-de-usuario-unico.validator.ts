@@ -12,7 +12,6 @@ export class IsNomeDeUsuarioUnicoConstraint implements ValidatorConstraintInterf
     }
 }
 
-
 export function IsNomeDeUsuarioUnico(validationOptions?: ValidationOptions) {
     return function (object: Object, propertyName: string) {
       registerDecorator({

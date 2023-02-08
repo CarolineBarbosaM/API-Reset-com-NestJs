@@ -10,7 +10,7 @@ export class UsuarioController {
 
   @Get(':nome')
   public buscarPeloNome(
-    @Param('nomeDeUsuario') nomeDeUsuario: string
+    @Param('userName') nomeDeUsuario: string
   ) {
     return this.usuarioService.buscarPeloNome(nomeDeUsuario)
   }
