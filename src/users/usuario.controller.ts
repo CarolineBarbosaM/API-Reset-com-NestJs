@@ -1,4 +1,6 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpStatus, NotFoundException, Param, Post } from '@nestjs/common';
+import { NestResponseBuilder } from '../core/http/nest-response-builder';
+import { NestResponse } from '../core/http/nest.response';
 import { Usuario } from './entites/usuario.entity';
 import { UsuarioService } from './usuario.service';
 
@@ -12,13 +14,30 @@ export class UsuarioController {
   public buscarPeloNome(
     @Param('userName') nomeDeUsuario: string
   ) {
-    return this.usuarioService.buscarPeloNome(nomeDeUsuario)
+    const usuarioEncontrado = this.usuarioService.buscarPeloNome(nomeDeUsuario)
+
+    if(!usuarioEncontrado) {
+      throw new NotFoundException({
+        statusCode: HttpStatus.NOT_FOUND,
+        message: 'usuario não encontrado.'
+      })
+    }
+
+    return usuarioEncontrado
   }
 
   @Post()
   public criar(
     @Body() usuario: Usuario
-  ) {
-    return this.usuarioService.criar(usuario);
+  ): NestResponse {
+    const usuarioCriado = this.usuarioService.criar(usuario);
+
+    return new NestResponseBuilder()
+      .withStatus(HttpStatus.CREATED)
+      .withHeaders({
+        'Location': `/users/${usuarioCriado.nomeDeUsuario}`
+      })
+      .withBody(usuarioCriado)
+      .build();
   }
 }

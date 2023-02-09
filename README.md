@@ -2,8 +2,7 @@
 
 API de gerenciamento de usuários utilizando conceitos como: aplicações RESET, verbos HTTP, utilização de decorators, 
 criação de serviços, padrões de projetos, inversão de controle e injeção de dependências, <em>providers</em>, tipagens TypeScript,
-<em>path params</em>, processo de validação com  <em>class-validator </em> e  <em>class-transformer</em>, <em>ValidationPipe</em>, validação customizaada, serialização, interceptadores, <em>ClassSerializerInterceptor</em>, Tratar erros com filtros de exceção... (vou colocar aos pouco),
-utilização do Swagger API para documentação da API.
+<em>path params</em>, processo de validação com  <em>class-validator </em> e  <em>class-transformer</em>, <em>ValidationPipe</em>, validação customizaada, serialização, interceptadores, <em>ClassSerializerInterceptor</em>, Tratar erros com filtros de exceção, modelo de maturidade de Leonard Richardson, <em>NestResponse</em>, adaptadores do Express e do Fastify, utilização do Swagger API para documentação da API.
 
 ### Clone o reposotório
 
