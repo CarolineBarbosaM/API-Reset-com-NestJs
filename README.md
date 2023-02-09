@@ -14,7 +14,7 @@ git clone https://github.com/CarolineBarbosaM/API-Reset-com-NestJs.git
 ### Instale a Dependências:
 
 ```bash
-npm install || npm i
+npm install
 ```
 
 ### Execute o Projeto
@@ -52,12 +52,9 @@ npm run test:cov
 1. Cursos Alura:
     - APIs REST com NestJS: buscas, validação, serialização e detalhes arquiteturais
     - Node.js: testes unitários e de integração
-    - Node.js: criptografia e tokens JWT
     - Swagger: documentando suas APIs
 
 2. Leitura:
 
     - Orientação a Objetos e SOLID para Ninjas - **Maurício Aniche**
     - [NestJS - Swagger - Documentação de Endpoint](https://github.com/FabricaDeSinapse/nestjs-documentacao-swagger/blob/main/README.md)
-
-3. Videos
