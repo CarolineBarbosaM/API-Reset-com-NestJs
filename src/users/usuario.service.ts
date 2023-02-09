@@ -1,28 +1,36 @@
-import { Injectable } from "@nestjs/common";
-import { Usuario } from "./entites/usuario.entity";
+import { HttpStatus, Injectable, NotFoundException } from "@nestjs/common";
+import { UserDto } from "./dto/users.dto";
 
 @Injectable()
 export class UsuarioService {
-    private usuarios: Array<Usuario> = [{
+    private usuarios: Array<UserDto> = [{
         id: 1,
-        dataDeEntrada: new Date(),
+        entryDate: new Date(),
         email: 'carol@email.com',
-        nomeCompleto: 'Caroline Barbosa Martins',
-        nomeDeUsuario: 'carol',
-        senha: '123'
+        fullName: 'Caroline Barbosa Martins',
+        userName: 'carol',
+        password: '123'
     }];
 
-    public buscarPeloNome(nomeUsuario: string): Usuario {
-        const buscaDeUsuario =  this.usuarios.find(
-            usuario => usuario.nomeDeUsuario == nomeUsuario
-        )
-
-        return buscaDeUsuario
-    }
-
-    public criar(usuario: Usuario): Usuario {
+    public criar(usuario: UserDto): UserDto {
         this.usuarios.push(usuario);
 
         return usuario;
+    }
+
+    public buscarPeloNome(nomeUsuario: string): UserDto {
+        const buscaDeUsuario =  this.usuarios.find(
+            usuario => usuario.userName == nomeUsuario
+        )
+
+        if(!buscaDeUsuario) {
+            throw new NotFoundException({
+              statusCode: HttpStatus.NOT_FOUND,
+              message: 'usuario não encontrado.'
+            })
+          }
+      
+
+        return buscaDeUsuario
     }
 }
