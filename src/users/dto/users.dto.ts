@@ -1,4 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger"
+import { Usuario } from "../entites/usuario.entity"
 
 export class UserDto {
 
@@ -31,10 +32,4 @@ export class UserDto {
         description: `Esse é o nome completo do usuário`,
     })
     fullName: string
-
-    @ApiProperty({
-        example: new Date(),
-        description: `Essa é a data de entrada do usuário`,
-    })
-    entryDate: Date
   }

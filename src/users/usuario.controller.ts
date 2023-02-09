@@ -19,10 +19,10 @@ export class UsuarioController {
   ){}
 
   @Post()
-  public criar(
+  public async criar(
     @Body() usuario: UserDto
-  ): NestResponse {
-    const usuarioCriado = this.usuarioService.criar(usuario);
+  ): Promise<NestResponse> {
+    const usuarioCriado = await this.usuarioService.criar(usuario);
 
     return new NestResponseBuilder()
       .withStatus(HttpStatus.CREATED)
@@ -34,10 +34,10 @@ export class UsuarioController {
   }
 
   @Get(':nome')
-  public buscarPeloNome(
+  public async buscarPeloNome(
     @Param('userName') nomeDeUsuario: string
-  ) {
-    const usuarioEncontrado = this.usuarioService.buscarPeloNome(nomeDeUsuario)
+  ): Promise<UserDto> {
+    const usuarioEncontrado = await this.usuarioService.buscarPeloNome(nomeDeUsuario)
 
     return usuarioEncontrado
   }

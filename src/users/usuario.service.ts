@@ -5,21 +5,20 @@ import { UserDto } from "./dto/users.dto";
 export class UsuarioService {
     private usuarios: Array<UserDto> = [{
         id: 1,
-        entryDate: new Date(),
         email: 'carol@email.com',
         fullName: 'Caroline Barbosa Martins',
         userName: 'carol',
         password: '123'
     }];
 
-    public criar(usuario: UserDto): UserDto {
-        this.usuarios.push(usuario);
+    public async criar(usuario: UserDto): Promise<UserDto> {
+        await this.usuarios.push(usuario);
 
         return usuario;
     }
 
-    public buscarPeloNome(nomeUsuario: string): UserDto {
-        const buscaDeUsuario =  this.usuarios.find(
+    public async buscarPeloNome(nomeUsuario: string): Promise<UserDto> {
+        const buscaDeUsuario = await this.usuarios.find(
             usuario => usuario.userName == nomeUsuario
         )
 
